@@ -12,13 +12,13 @@ SESSION = os.getenv("SESSION_STRING")
 
 # Channels to read from (usernames, no @)
 SOURCE_CHANNELS = [
-    "iamprasadtech",
-    "extrape",
     "TechFactsDeals",
-    "charan0678"
+    "extrape",
+    "iamprasadtech",
+    "charan0678"     # your test channel
 ]
 
-# Send messages TO this bot
+# Forward messages to this bot
 TARGET_CHANNEL = "ExtraPeBot"
 
 client = TelegramClient(StringSession(SESSION), API_ID, API_HASH)
@@ -31,7 +31,7 @@ async def forward_message(event):
     except Exception as e:
         print("Error forwarding:", e)
 
-print("USERBOT RUNNING…")
+print("USERBOT RUNNING AS USER SESSION…")
 client.start()
 print("Forwarding active…")
 client.run_until_disconnected()
