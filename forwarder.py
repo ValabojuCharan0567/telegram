@@ -14,11 +14,12 @@ SESSION = os.getenv("SESSION_STRING")
 SOURCE_CHANNELS = [
     "iamprasadtech",
     "extrape",
-    "TechFactsDeals"
+    "TechFactsDeals",
+    "charan0678"
 ]
 
 # Destination bot/channel
-TARGET_CHANNEL = "charan0678"
+TARGET_CHANNEL = "ExtraPeBot"
 
 # Create client with zero-delay settings
 client = TelegramClient(
